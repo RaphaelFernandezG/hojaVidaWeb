@@ -38,6 +38,7 @@ public class LoginController extends HttpServlet implements Serializable {
 		// TODO Auto-generated method stub
 		String email=request.getParameter("email");
 		
+		
 	}
 
 	/**
