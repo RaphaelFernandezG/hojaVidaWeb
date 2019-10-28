@@ -23,7 +23,7 @@ public class Persona implements Serializable {
 	
 	private String sexo;
 	
-	private Date fechanacimiento;
+	private String fechanacimiento;
 	
 	private int paisnacimiento;
 	
@@ -105,7 +105,7 @@ public class Persona implements Serializable {
 	}
 
 
-	public void setFechanacimiento(Date fechanacimiento) {
+	public void setFechanacimiento(String fechanacimiento) {
 		this.fechanacimiento = fechanacimiento;
 	}
 
