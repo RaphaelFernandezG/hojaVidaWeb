@@ -38,6 +38,12 @@ public class PersonaController extends HttpServlet implements Serializable {
 		// TODO Auto-generated method stub
 		String nombres=request.getParameter("nombres");
 		String primerapellido=request.getParameter("primerapeliido");
+		String segundoapellido=request.getParameter("segundoapellido");
+		String tipodocumento=request.getParameter("tipodocumento");
+		
+		
+		
+		
 	}
 
 	/**
