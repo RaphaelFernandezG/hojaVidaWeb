@@ -1,0 +1,139 @@
+#texto{
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  font-weight: 600;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+#banner{
+  background-image: url('../img/banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  max-width: 100%;
+  
+}
+h5
+{
+  font-weight: 400;
+}
+
+/*ESTILOS DEL LOGIN*/
+
+#formlogin
+{
+  margin-top: 20px;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 468px) {
+  /* Aquí van todos los estilos CSS */
+  #formlogin{
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.tabs #formlogin
+{
+	height: 60px;
+}
+
+.form-container
+{
+	padding: 40px;
+	padding-top: 10px;
+}
+
+.confirmation-tabs-btn
+{
+	position: absolute;
+}
+
+/* label focus color */
+.input-field input:focus + label {
+  color: #455a64 !important;
+}
+/* label underline focus color */
+.row .input-field input:focus {
+  border-bottom: 1px solid #455a64 !important;
+  box-shadow: 0 1px 0 0 #455a64  !important
+}
+
+#titulologin{
+  color: #455a64;
+}
+
+.tabs .tab a {
+  color: #cfd8dc;
+  /*Custom Text Color*/
+}
+
+.tabs .tab a:hover {
+  color:#cfd8dc;
+  /*Custom Color On Hover*/
+}
+
+.tabs .tab a:focus.active {
+  color:#26a69a;
+  /*Custom Text Color While Active*/
+  background-color: #455a64 ;
+  /*Custom Background Color While Active*/
+}
+
+.tabs .indicator {
+  background-color:#cfd8dc;
+  /*Custom Color Of Indicator*/
+}
+
+/*ESTILOS DEL FORMULARIO DE LA HOJA DE VIDA*/
+#formhojavida
+{
+  margin-top: 20px;
+  width: 950px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1080px) {
+  /* Aquí van todos los estilos CSS */
+  #formhojavida{
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.tabs #formhojavida
+{
+	height: 70px;
+}
+
+[type="radio"]:checked + span:after, [type="radio"].with-gap:checked + span:after {
+  background-color: #455a64;
+}
+[type="radio"]:checked + span:after, [type="radio"].with-gap:checked + span:after {
+  background-color: #455a64;
+}
+
+[type="radio"]:checked + span:after, [type="radio"].with-gap:checked + span:before, [type="radio"].with-gap:checked + span:after {
+  border: 2px solid #455a64;
+}
+.datepicker-date-display {
+  background-color: #455a64;
+}
+
+.datepicker-table td.is-today {
+  color: #698a99;
+}
+
+.datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done {
+  color: #455a64;
+  padding: 0 1rem;
+}
