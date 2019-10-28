@@ -59,7 +59,7 @@ public class PersonaDAO {
 				perso.setPrimerapellido(res.getString("primerapellido"));
 				perso.setSegundoapellido(res.getString("segundoapellido"));
 				perso.setSexo(res.getString("sexo"));
-				perso.setFechanacimiento(res.getDate("fechanacimiento"));
+				perso.setFechanacimiento(res.getString("fechanacimiento"));
 				perso.setPaisnacimiento(res.getInt("paisnacimiento"));
 				perso.setDepartamentonacimiento(res.getInt("departamentonacimiento"));
 				perso.setMunicipionacimiento(res.getInt("municipionacimiento"));
