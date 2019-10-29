@@ -17,8 +17,8 @@ public class DepartamentoDAO {
 	}
 	
 	
-	public List<Departamento> listardepartamentos(){
-		String cadena= "select * from pais";
+	public List<Departamento> listarDepartamentos(){
+		String cadena= "select * from departamento";
 		List<Departamento> departamentos=new ArrayList<Departamento>();
 		try {
 			ResultSet res=con.query(cadena);

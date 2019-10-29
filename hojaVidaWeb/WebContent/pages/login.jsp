@@ -2,6 +2,12 @@
 <%@page import="java.util.List"%>
 <%@page import="co.hojavida.dao.PaisDAO"%>
 <%@page import="co.hojavida.model.Pais"%>
+<%@page import="co.hojavida.model.TipoDocumento"%>
+<%@page import="co.hojavida.dao.TipoDocumentoDAO"%>
+<%@page import="co.hojavida.dao.DepartamentoDAO"%>
+<%@page import="co.hojavida.model.Departamento"%>
+<%@page import="co.hojavida.model.Municipio"%>
+<%@page import="co.hojavida.dao.MunicipioDAO"%>
 <html lang="en">
 
 <head>
@@ -93,9 +99,17 @@
                         <div class="input-field col l4 s6">
                             <select>
                                 <option id="tipodocumento" name="tipodocumento" value="" disabled selected>Tipo de documento</option>
-                                <option value="CC">Cedula de ciudadania</option>
+                                <%TipoDocumentoDAO tdoc= new TipoDocumentoDAO();
+                                List<TipoDocumento> tdocs=tdoc.listarTipoDocumento();%>
+                                <%for(TipoDocumento t:tdocs){%>
+                                	<option><%=t.getId()%></option>
+                                <%}%>
+                                
+                                
+                                
+                                <!--<option value="CC">Cedula de ciudadania</option>
                                 <option value="CE">Cedula de extranjeria</option>
-                                <option value="PAS">Pasaporte</option>
+                                <option value="PAS">Pasaporte</option>-->
                             </select>
                         </div>
                     </div>
@@ -139,8 +153,18 @@
                         <div class="input-field col s12 l3">
                             <select>
                                 <option id="departamentonacimiento" name="departamentonacimiento" value="" disabled selected>Departamento</option>
-                                <option value="22">Norte De Santander</option>
-                                <!-- <option value="2">Option 2</option>
+                                <%DepartamentoDAO departamento= new DepartamentoDAO();
+                                List<Departamento> departamentos=departamento.listarDepartamentos();%>
+                                <%for(Departamento d:departamentos){%>
+                                	<option value=<%d.getId();%>><%=d.getNombre()%></option>
+                                <%}%>
+                                
+                                
+                                
+                                
+                                
+                                <!--<option value="22">Norte De Santander</option>
+                                <option value="2">Option 2</option>
                                 <option value="3">Option 3</option>-->
                             </select>
                             <label>Depto. de nacimiento</label>
@@ -148,8 +172,17 @@
                         <div class="input-field col s12 l3">
                             <select>
                                 <option id="municipionacimiento" name="municipionacimiento" value="" disabled selected>Municipio</option>
-                                <option value="109">Cucuta</option>
-                                <!-- <option value="2">Option 2</option>
+                                <%MunicipioDAO municipio= new MunicipioDAO();
+                                List<Municipio> municipios=municipio.listarMunicipios();%>
+                                <%for(Municipio m:municipios){%>
+                                	<option value=<%m.getId();%>><%=m.getNombre()%></option>
+                                <%}%>
+                                
+                                
+                                
+                                
+                                <!--<option value="109">Cucuta</option>
+                                <option value="2">Option 2</option>
                                 <option value="3">Option 3</option>-->
                             </select>
                             <label>Municipio de nacimiento</label>
@@ -168,8 +201,12 @@
                         <div class="input-field col l4 s12">
                             <select>
                                 <option id="sexo" name="sexo" value="" disabled selected>Sexo</option>
-                                <option value="F">Masculino</option>
-                                <option value="M">Femenino</option>
+                                
+                                
+                                
+                                
+                                <!-- <option value="F">Masculino</option>
+                                <option value="M">Femenino</option>-->
                             </select>
                             <label>Sexo</label>
                         </div>

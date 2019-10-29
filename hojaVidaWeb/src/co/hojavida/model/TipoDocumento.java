@@ -7,7 +7,7 @@ import java.io.Serializable;
  * The persistent class for the tipodocumento database table.
  * 
  */
-public class Tipodocumento implements Serializable {
+public class TipoDocumento implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private String id;
@@ -16,7 +16,7 @@ public class Tipodocumento implements Serializable {
 
 	
 
-	public Tipodocumento() {
+	public TipoDocumento() {
 	}
 
 	public String getDescripcion() {
