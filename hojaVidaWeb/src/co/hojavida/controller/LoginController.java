@@ -48,6 +48,13 @@ public class LoginController extends HttpServlet implements Serializable {
 		p.setPassword(password);
 		
 		PersonaDAO pdao=new PersonaDAO();
+		//Persona resul=pdao.buscarPersona(p);
+		
+		/*if(resul.getCorreo()!=null) {
+			response.sendRedirect("pages/principal.jsp");
+		}else{
+			response.sendRedirect("pages/form.jsp");
+		}*/
 		if(pdao.buscarPersona(p)) {
 			response.sendRedirect("pages/principal.jsp");
 		}else{

@@ -79,6 +79,21 @@ public class PersonaDAO {
 	}
 	
 	public boolean buscarPersona(Persona persona) {
+		
+		/*String cadena="select * from persona where correo='"+persona.getCorreo()+"'And password='"+persona.getPassword()+"'";
+		Persona p=new Persona();
+		try {
+			ResultSet res=con.query(cadena);
+			p.setCorreo(res.getString("correo"));
+			p.setPassword(res.getString("password"));
+			res.close();
+			return p;
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return p;*/
+		
 		String correo = persona.getCorreo();
 		String pass = persona.getPassword();
 		String cadena = "select * from persona where correo='" + correo + "' AND password='" + pass+"'";

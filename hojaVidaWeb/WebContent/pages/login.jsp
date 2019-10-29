@@ -57,7 +57,7 @@
 
         <!--INICIO DE SESION-->
         <div id="login" class="col s12">
-            <form class="col s12" action="/LoginController" method="post">
+            <form class="col s12" action="../LoginController" method="post">
                 <div class="form-container">
                     <h3 id="titulologin">Ingresar</h3>
                     <div class="row">
@@ -82,7 +82,7 @@
 
         <!--REGISTRO DEL USUARIO-->
         <div id="register" class="col s12" style="display: none;">
-            <form class="col s12" action="/PersonaController" method="post">
+            <form class="col s12" action="../PersonaController" method="post">
                 <div class="form-container">
                     <h3 id="titulologin">Registrate</h3>
                     <div class="row">
