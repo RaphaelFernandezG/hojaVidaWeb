@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import co.hojavida.dao.PersonaDAO;
+import co.hojavida.model.Persona;
+
 /**
  * Servlet implementation class LoginController
  */
@@ -36,7 +39,20 @@ public class LoginController extends HttpServlet implements Serializable {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String email=request.getParameter("email");
+		String correo=request.getParameter("correo");
+		String password=request.getParameter("password");
+		
+		
+		Persona p=new Persona();
+		p.setCorreo(correo);
+		p.setPassword(password);
+		
+		PersonaDAO pdao=new PersonaDAO();
+		if(pdao.buscarPersona(p)) {
+			response.sendRedirect("pages/principal.jsp");
+		}else{
+			response.sendRedirect("pages/login.jsp");
+		};
 		
 		
 	}

@@ -77,5 +77,24 @@ public class PersonaDAO {
 		return personas;
 		
 	}
+	
+	public boolean buscarPersona(Persona persona) {
+		String correo = persona.getCorreo();
+		String pass = persona.getPassword();
+		String cadena = "select * from persona where correo='" + correo + "' AND password='" + pass+"'";
+		try {
+			ResultSet res = con.query(cadena);
+			if (res.getString("correo") == correo && res.getString("password") == pass) {
+				res.close();
+				return true;
+			}
+			return false;
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+
+	}
 
 }

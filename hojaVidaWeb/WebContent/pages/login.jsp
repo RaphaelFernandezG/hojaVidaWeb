@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<%@page import="java.util.List"%>
+<%@page import="co.hojavida.dao.PaisDAO"%>
+<%@page import="co.hojavida.model.Pais"%>
 <html lang="en">
 
 <head>
@@ -54,25 +57,24 @@
 
         <!--INICIO DE SESION-->
         <div id="login" class="col s12">
-            <form class="col s12">
+            <form class="col s12" action="/LoginController" method="post">
                 <div class="form-container">
                     <h3 id="titulologin">Ingresar</h3>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="email" type="email" class="validate">
+                            <input id="correo" name="correo" type="email" class="validate">
                             <label for="email">Correo E-mail</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="password" type="password" class="validate">
+                            <input id="password" name="password" type="password" class="validate">
                             <label for="password">Contraseña</label>
                         </div>
                     </div>
                     <br>
                     <center>
-                        <button class="btn waves-effect waves-light blue-grey darken-4" type="submit" name="action"
-                            formaction="principal.html">INGRESAR</button>
+                        <button class="btn waves-effect waves-light blue-grey darken-4" type="submit">INGRESAR</button>
                     </center>
                 </div>
             </form>
@@ -80,20 +82,20 @@
 
         <!--REGISTRO DEL USUARIO-->
         <div id="register" class="col s12" style="display: none;">
-            <form class="col s12" action="../src/co.hojavida.controller/PersonaController.java" method="POST">
+            <form class="col s12" action="/PersonaController" method="post">
                 <div class="form-container">
                     <h3 id="titulologin">Registrate</h3>
                     <div class="row">
                         <div class="input-field col l8 s6">
-                            <input id="cedula" type="number" class="validate">
+                            <input id="numerodocumento" name="numerodocumento" type="number" class="validate">
                             <label for="cedula">Numero de documento</label>
                         </div>
                         <div class="input-field col l4 s6">
                             <select>
-                                <option value="" disabled selected>Tipo de documento</option>
-                                <option id="CC" name="CC" value="1">Cedula de ciudadania</option>
-                                <option id="CE" name="CE" value="2">Cedula de extranjeria</option>
-                                <option id="PAS" name="PAS" value="3">Pasaporte</option>
+                                <option id="tipodocumento" name="tipodocumento" value="" disabled selected>Tipo de documento</option>
+                                <option value="CC">Cedula de ciudadania</option>
+                                <option value="CE">Cedula de extranjeria</option>
+                                <option value="PAS">Pasaporte</option>
                             </select>
                         </div>
                     </div>
@@ -118,17 +120,26 @@
                         </div>
                         <div class="input-field col s12 l3">
                             <select>
-                                <option value="" disabled selected>Pais</option>
-                                <option id="1" name="1" value="1">Colombia</option>
-                                <!--<option value="2">Option 2</option>
+                                <option id="paisnacimiento" name="paisnacimiento" value="" disabled selected>Pais</option>
+                                
+                                <%PaisDAO pais= new PaisDAO();
+                                List<Pais> paises=pais.listarPaises();%>
+                                <%for(Pais p:paises){%>
+                                	<option><%=p.getNombre()%></option>
+                                <%}%>
+                                
+                                
+                                
+                                <!--<option value="1">Colombia</option>
+                                <option value="2">Option 2</option>
                                 <option value="3">Option 3</option>-->
                             </select>
                             <label>País de nacimiento</label>
                         </div>
                         <div class="input-field col s12 l3">
                             <select>
-                                <option value="" disabled selected>Departamento</option>
-                                <option id="22" name="22" value="1">Norte De Santander</option>
+                                <option id="departamentonacimiento" name="departamentonacimiento" value="" disabled selected>Departamento</option>
+                                <option value="22">Norte De Santander</option>
                                 <!-- <option value="2">Option 2</option>
                                 <option value="3">Option 3</option>-->
                             </select>
@@ -136,8 +147,8 @@
                         </div>
                         <div class="input-field col s12 l3">
                             <select>
-                                <option value="" disabled selected>Municipio</option>
-                                <option id="109" name="109" value="1">Cucuta</option>
+                                <option id="municipionacimiento" name="municipionacimiento" value="" disabled selected>Municipio</option>
+                                <option value="109">Cucuta</option>
                                 <!-- <option value="2">Option 2</option>
                                 <option value="3">Option 3</option>-->
                             </select>
@@ -156,16 +167,15 @@
                         </div>
                         <div class="input-field col l4 s12">
                             <select>
-                                <option value="" disabled selected>Sexo</option>
-                                <option id="M" name="M" value="1">Masculino</option>
-                                <option id="F" name="F" value="2">Femenino</option>
+                                <option id="sexo" name="sexo" value="" disabled selected>Sexo</option>
+                                <option value="F">Masculino</option>
+                                <option value="M">Femenino</option>
                             </select>
                             <label>Sexo</label>
                         </div>
                     </div>
                     <center>
-                        <button class="btn waves-effect waves-light blue-grey darken-4 modal-trigger" href="#terminos"
-                            type="submit" name="action">Registrar</button>
+                        <button class="btn waves-effect waves-light blue-grey darken-4 modal-trigger" type="submit" name="action">Registrar</button>
                     </center>
                 </div>
             </form>

@@ -44,7 +44,7 @@ public class PersonaController extends HttpServlet implements Serializable {
 		String primerapellido=request.getParameter("primerapellido");
 		String segundoapellido=request.getParameter("segundoapellido");
 		String tipodocumento=request.getParameter("tipodocumento");
-		String numerodocumento=request.getParameter("documento");//int
+		String numerodocumento=request.getParameter("numerodocumento");//int
 		String sexo=request.getParameter("sexo");
 		String fechanacimiento=request.getParameter("fechanacimiento");
 		String paisnacimiento=request.getParameter("paisnacimiento");//int
