@@ -100,7 +100,7 @@ public class Persona implements Serializable {
 	}
 
 
-	public Date getFechanacimiento() {
+	public String getFechanacimiento() {
 		return fechanacimiento;
 	}
 

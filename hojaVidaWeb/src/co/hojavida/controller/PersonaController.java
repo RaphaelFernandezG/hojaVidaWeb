@@ -70,7 +70,7 @@ public class PersonaController extends HttpServlet implements Serializable {
 		PersonaDAO pa=new PersonaDAO();
 		pa.insertarPersona(p);
 		
-		response.sendRedirect("/??.jsp");
+		response.sendRedirect("pages/principal.jsp");
 		
 		
 		

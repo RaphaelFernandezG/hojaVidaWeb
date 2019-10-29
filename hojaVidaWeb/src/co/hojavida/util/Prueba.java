@@ -11,9 +11,9 @@ public class Prueba {
 		PaisDAO pa=new PaisDAO();
 		Pais p=new Pais();
 		p.setId(2);
-		//p.setNombre("Venezuela");
-		//pa.insertarPais(p);
-		pa.eliminarPais(p);
+		p.setNombre("Venezuela");
+		pa.insertarPais(p);
+		//pa.eliminarPais(p);
 
 	}
 

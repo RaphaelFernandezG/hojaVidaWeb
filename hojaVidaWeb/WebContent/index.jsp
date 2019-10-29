@@ -52,7 +52,7 @@
         <h5 id="texto" class="header center blue-grey-text text-lighten-4">Almacena tu hoja de vida con nosotros</h5>
       </div>
       <div class="row center">
-        <a class="waves-effect pulse btn blue-grey darken-2" href="pages/login.html"><i class="material-icons right">send</i>Ingresa</a>
+        <a class="waves-effect pulse btn blue-grey darken-2" href="pages/login.jsp"><i class="material-icons right">send</i>Ingresa</a>
       </div>
       <br><br>
     </div>

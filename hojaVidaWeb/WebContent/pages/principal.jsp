@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/materialize.css">
     <link rel="stylesheet" href="../css/style.css">
-
 </head>
 
 <body>
@@ -44,45 +43,36 @@
         </ul>
     </header>
 
-    <!--FORMULARIO-->
-    <div id="formlogin" class="container white z-depth-2">
-        <ul class="col s12 tabs blue-grey darken-4">
-            <li class="tab col s3"><a class="white-text active" href="#login">ingresar</a></li>
-            <li class="tab col s3"><a class="white-text tooltipped" data-position="top"
-                    data-tooltip="No tienes una cuenta? Registrate" href="#register">registrar</a></li>
-        </ul>
+    <!--CONTENIDO-->
+    <div class="container">
+        <div class="row">
+            <h3 class="center-align">Bienvenido a CVCheckpoint</h3>
+        </div>
+        <div class="card-panel hoverable">
+            <div class="row">
+                <div class="col s12 l6">
+                    <img id="profile" src="https://image.flaticon.com/icons/png/512/64/64572.png" alt=""
+                        class="circle responsive-img" width="100">
+                </div>
+                <div id="boton1" class="col s4 l2">
+                    <a class="waves-effect waves blue-grey darken-2 btn"><i
+                            class="material-icons left">picture_as_pdf</i>pdf</a>
+                </div>
+                <div id="boton1" class="col s4 l2">
+                    <a href="form.html" class="waves-effect waves blue-grey darken-2 btn"><i
+                            class="material-icons left">person_add</i>add</a>
+                </div>
+                <div id="boton2" class="col s4 l2">
+                    <a class="waves-effect waves deep-orange darken-1 btn"><i
+                            class="material-icons right">remove_circle_outline</i>salir</a>
+                </div>
 
-        <!--INICIO DE SESION-->
-        <div id="login" class="col s12">
+            </div>
+        </div>
+        <div class="card-panel hoverable">
             <form class="col s12">
                 <div class="form-container">
-                    <h3 id="titulologin">Ingresar</h3>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="email" type="email" class="validate">
-                            <label for="email">Correo E-mail</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="password" type="password" class="validate">
-                            <label for="password">Contraseña</label>
-                        </div>
-                    </div>
-                    <br>
-                    <center>
-                        <button class="btn waves-effect waves-light blue-grey darken-4" type="submit" name="action"
-                            formaction="principal.html">INGRESAR</button>
-                    </center>
-                </div>
-            </form>
-        </div>
-
-        <!--REGISTRO DEL USUARIO-->
-        <div id="register" class="col s12" style="display: none;">
-            <form class="col s12" action="../src/co.hojavida.controller/PersonaController.java" method="POST">
-                <div class="form-container">
-                    <h3 id="titulologin">Registrate</h3>
+                    <h3 id="titulologin">Datos Básicos</h3>
                     <div class="row">
                         <div class="input-field col l8 s6">
                             <input id="cedula" type="number" class="validate">
@@ -91,55 +81,55 @@
                         <div class="input-field col l4 s6">
                             <select>
                                 <option value="" disabled selected>Tipo de documento</option>
-                                <option id="CC" name="CC" value="1">Cedula de ciudadania</option>
-                                <option id="CE" name="CE" value="2">Cedula de extranjeria</option>
-                                <option id="PAS" name="PAS" value="3">Pasaporte</option>
+                                <option value="1">Cedula de ciudadania</option>
+                                <option value="2">Cedula de extranjeria</option>
+                                <option value="3">Pasaporte</option>
                             </select>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col l6 s12">
-                            <input type="text" id="nombres" name="nombres" class="validate">
+                            <input type="text" id="nombre" class="validate">
                             <label for="nombre">Nombre completo</label>
                         </div>
                         <div class="input-field col l3 s12">
-                            <input type="text" id="primerapellido" name="primerapellido" class="validate">
+                            <input type="text" id="primapellido" class="validate">
                             <label for="primapellido">Primer Apellido</label>
                         </div>
                         <div class="input-field col l3 s12">
-                            <input type="text" id="segundoapellido" name="segundoapellido" class="validate">
+                            <input type="text" id="segapellido" class="validate">
                             <label for="segapellido">Segundo Apellido</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12 l3">
-                            <input type="text" id="fechanacimiento" name="fechanacimiento" class="datepicker">
+                            <input type="text" id="fechanac" class="datepicker">
                             <label for="fechanac">Fecha de nacimiento</label>
                         </div>
                         <div class="input-field col s12 l3">
                             <select>
                                 <option value="" disabled selected>Pais</option>
-                                <option id="1" name="1" value="1">Colombia</option>
-                                <!--<option value="2">Option 2</option>
-                                <option value="3">Option 3</option>-->
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
                             </select>
                             <label>País de nacimiento</label>
                         </div>
                         <div class="input-field col s12 l3">
                             <select>
                                 <option value="" disabled selected>Departamento</option>
-                                <option id="22" name="22" value="1">Norte De Santander</option>
-                                <!-- <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>-->
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
                             </select>
                             <label>Depto. de nacimiento</label>
                         </div>
                         <div class="input-field col s12 l3">
                             <select>
                                 <option value="" disabled selected>Municipio</option>
-                                <option id="109" name="109" value="1">Cucuta</option>
-                                <!-- <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>-->
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
                             </select>
                             <label>Municipio de nacimiento</label>
                         </div>
@@ -147,31 +137,30 @@
 
                     <div class="row">
                         <div class="input-field col l4 s12">
-                            <input type="email" id="correo" name="correo" class="validate">
+                            <input type="email" id="email" class="validate">
                             <label for="email">Correo Electronico</label>
                         </div>
                         <div class="input-field col l4 s12">
-                            <input type="password" id="password" name="password" class="validate">
+                            <input type="password" id="password" class="validate">
                             <label for="password">Contraseña</label>
                         </div>
                         <div class="input-field col l4 s12">
                             <select>
                                 <option value="" disabled selected>Sexo</option>
-                                <option id="M" name="M" value="1">Masculino</option>
-                                <option id="F" name="F" value="2">Femenino</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
                             </select>
                             <label>Sexo</label>
                         </div>
                     </div>
                     <center>
-                        <button class="btn waves-effect waves-light blue-grey darken-4 modal-trigger" href="#terminos"
-                            type="submit" name="action">Registrar</button>
+                        <button class="btn waves-effect waves-light blue-grey darken-4 modal-trigger" href=""
+                            type="submit" name="action">ACTUALIZAR</button>
                     </center>
                 </div>
             </form>
         </div>
     </div>
-
 
     <!--PIE DE PAGINA-->
     <footer id="footer" class="page-footer blue-grey darken-1">
